@@ -1,0 +1,317 @@
+/* Crear variables para mandarlas a llamar en mis estilos -- y lo mando a llamar con la palabra reserva var(nombre de variable) */
+:root {
+    --primary-color: rgb(180, 221, 237);
+    --secondary-color: rgb(241, 139, 139);
+    --bg-color: #090f26;
+    --title-color: blueviolet;
+    --light-color: whitesmoke;
+    --font-primary: "Madimi One", sans-serif;
+}
+
+
+body{
+    background-color: var(--bg-color);
+    margin: 0;
+    color: var(--primary-color);
+    font-family: var(--font-primary);
+    font-size: small;
+}
+
+.header--container h1 {
+    background-color: var(--light-color);
+    /* background-image: url("https://media.licdn.com/dms/image/D5612AQESF9Vyw_hdYw/article-cover_image-shrink_720_1280/0/1685516262994?e=1716422400&v=beta&t=onY6Bpf-v6BQguomxtUSP0fVtFO3YXsfXRQ0D9XhjDQ"); 
+    background-image: url("../public/assets/bob_ross_lego.png");
+    background-size: 100px;
+    background-repeat:no-repeat; 
+    background-position: center;
+    */
+    text-align: center;
+    /*
+    border-color: brown;
+    border-style: solid;
+    border: 2px solid brown;
+    */
+    /*
+    border-width: 5em;
+    border-style:dashed
+    */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-style:normal; */
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0px 0px 0px 0px;
+    padding: 20px 5px;
+}
+
+.navbar--container{
+    color:var(--light-color);
+    margin: 8px;
+    display: flex;
+    /* flex-direction: column; Se acomodan en columna, es decir, una debajo de la otra */
+    /* flex-direction: row-reverse, se acomodan en fila de manera inversa 
+    flex-direction: row-reverse;*/
+    /* flex-direction: column-reverse; Se acomodan en columna, es decir, una debajo de la otra pero de manera inversa */
+    /* flex-direction row, se acomodan en fila (tipo inline) */
+    flex-direction: row;
+    /* 
+    Permite alinear el elemento al inicio, al final o al centro del eje principal
+    justify-content: start;
+    justify-content: end; 
+    justify-content: center;*/
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    margin: 0px;
+    padding: 20px 10px;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    
+}
+
+.navbar--logo {
+    width: 30px;
+    height: 30px;
+    /* border: 1px goldenrod solid; */
+}
+
+/* #logo-nasa {
+    width: 80px;
+    border: 1px solid brown;
+} */
+
+.navbar--menu {
+    display: flex;
+    /* Puedo personalizar el espacio entre elementos */
+    gap: 20px;
+}
+
+.navbar--menu a {
+    color: var(--light-color);
+    text-decoration:none;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar--menu a:hover {
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+
+.navbar--container {
+    font-family: "Cormorant Upright", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#search--button {
+    border: var(--title-color) solid 1px;
+    background-color: var(--light-color);
+    text-align: center;
+    width: 60px;
+    color: darkblue;
+    border-radius: 6px;
+    cursor:pointer;
+    /* padding: 10px; Se aplica a todos los paddings */
+    /* padding: 10px 15px; Se aplica el primero arriba y abajo, el segundo a derecha e izquierda*/
+    /* padding: 10px 50px 2px 15px; Se aplican en el sentido de las manecillas */
+    padding-top: 3px;
+    padding-right: 16px;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: smaller;
+}
+
+#search--button:hover {
+    background-color: var(--title-color);
+    color: var(--light-color);
+    transition: 1s;
+    border: solid var(--light-color) 1px;
+}
+
+#input--search {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: smaller;
+    padding: 2px 5px;
+    width: 150px;
+}
+
+.main--container {
+    margin: 0px 10px;
+}
+
+.main--container h3 {
+    color: var(--secondary-color);
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.main--text p, .main--section p{
+    color: var(--primary-color);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+    text-align: justify;
+}
+
+.main--img{
+    width: 100%;
+}
+
+.position {
+    border: solid var(--light-color) 1px;
+    width: 60px;
+    height: 60px;
+}
+
+#p-static {
+    /* Siempre se mantiene en su posición, es decir, estático */
+    position: static; 
+    background-color: orangered;
+    top: 20px;
+}
+
+#p-relative {
+    position: relative;
+    background-color: brown;
+    /* top:20px */
+    left: 100px;
+    /* bottom: 60px; */
+}
+
+#p-fixed {
+    position: fixed;
+    top: 450px;
+    left: 350px;
+    border: none;
+}
+
+#p-absolute {
+    position: absolute;
+    background-color: darkkhaki;
+}
+
+#p-sticky {
+    position: sticky;
+    border: solid red 1px;
+    top: 10px;
+}
+
+.d-inline {
+    border: dotted 1px gold;
+    display:inline;
+}
+
+.d-block {
+    text-decoration: none;
+    display: block;
+}
+
+.d-inblock {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: dashed limegreen 1px;
+}
+
+.d-none {
+    margin: 8px 0px;
+    border: double 1px red;
+    width: 300px;
+    height: 50px;
+    display: block;
+}
+
+/* Aplicando media query para hacer responsive nuestro display none */
+@media (max-width: 720px) {
+    .d-none {
+        display: none;
+    }
+
+    .main--img {
+        width: 50%;
+    }
+
+    .d-block {
+        text-decoration: none;
+        display: inline;
+    }
+
+    #p-static {
+        position: static; 
+        background-color:aquamarine;
+        top: 20px;
+    }
+
+    .navbar--menu {
+        display: flex;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    #p-static {
+        position: static; 
+        background-color:darkgreen;
+        top: 20px;
+    }
+
+    .navbar--menu {
+        display: none;
+    }
+}
+
+/* Estilos Grid (grid-area) */
+.navbar--container {
+    grid-area: navbar;
+}
+/* 
+.main--text {
+    grid-area: article;
+}
+
+.main--section {
+    grid-area: section;
+} */
+
+.main--container {
+    grid-area: container;
+    padding: 10px
+}
+
+aside {
+    grid-area: sidebar;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* Crear template a utilizar con los grid-area */
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.1fr 0.2fr 0.1fr;
+    grid-template-areas: 
+        "navbar navbar navbar"
+        "container container sidebar"
+        "footer footer footer"
+    ;
+}
+
+@media (max-width: 420px){
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 40% 30% 25% ;
+        grid-template-areas: 
+            "navbar"
+            "container" 
+            "sidebar"
+            "footer"
+        ;
+    }
+}

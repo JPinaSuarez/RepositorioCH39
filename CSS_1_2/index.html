@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro CSS</title>
+    <!-- Conectar mi hoja de estilos (CSS) con el HTML -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+
+    <!-- Preconectando con Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font-family Cormorant Upright -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font-family Madimi One -->
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- 
+        - CSS. Nos permite agregar estilos a nuestro html. 
+        - Podemos utilizar CSS de tres maneras:
+            1. Mediante estilos en línea (inline)
+            2. Mediante etiqueta <style></style> en el html
+            3. Mediante un archivo externo de tipo .css    
+    -->
+    
+    <!-- Estilos CSS con etiqueta style 
+    <style>
+        body {
+            background-color: #090f26;
+        }
+
+        .navbar--container{
+            color:snow;
+        }
+    </style>
+    -->
+
+
+    <!-- Header -->
+        <!-- Estilo en línea 
+    <header class="header--container">
+        <h1 style="color:Blueviolet;">Introducción a CSS</h1>
+    </header>-->
+
+    <!-- Navbar -->
+        <!-- Notación emmet: div>(div>img)+(div>a*3)+(div>p*2) -->
+    <nav class="navbar--container">
+        <div class="navbar--logo">
+            <img src="./public/assets/NASA_logo.svg.png" alt="logo de la nasa con fondo negro" class="navbar--logo" id="logo-nasa">
+        </div>
+        <div class="navbar--menu">
+            <a href="http://api.open-notify.org/astros.json" target="_blank">Astros</a>
+            <a href="https://www.nasa.gov/" target="_blank">Nasa</a>
+            <a href="https://www.nasa.gov/international-space-station/" target="_blank">ISS</a>
+        </div>
+        <div class="navbar--search">
+            <input type="text" name="search" id="input--search" placeholder="Escríbe lo que estás buscando">
+            <button id="search--button">Buscar</button>
+            <!-- <p>Búsqueda</p>
+            <p id="search--button">Buscar</p> -->
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="main--container">
+        <article class="main--text">
+            <header>
+                <h3>Astros API</h3>
+            </header>
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto incidunt labore, aliquid facilis voluptas nam dignissimos natus! Id aliquam possimus neque dolorem libero, impedit veniam nulla veritatis porro perspiciatis error. </p>
+            </section>
+            
+            <!-- <div id="p-sticky">Position sticky</div> -->
+            
+            <section>
+                <img class="main--img" src="./public/assets/apollo-13.jpg" alt="alunizaje del apolo 13">
+            </section>
+        </article>
+        <article class="main--section">
+            <section>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sed possimus quasi dolores saepe soluta tenetur harum eum deserunt ea est natus quidem autem, adipisci, reprehenderit pariatur nulla aut minus.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum sed nobis fugiat omnis alias, odit distinctio porro obcaecati explicabo excepturi. Provident laudantium est reiciendis repudiandae iste, natus quas dicta!
+                </p>
+            </section>
+            <section>
+                <!-- Video de youtube -->
+                <iframe 
+                    width="100%" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/xRPjKQtRXR8?si=eHzKXvrz1cpav6ol" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </section>
+        </article>
+    </main>
+    <!-- Sidebar -->
+    <aside>
+        
+        <div class="position" id="p-static">Position static</div>
+        <div class="position" id="p-relative">Position relative</div>
+        <a href="./pages/d-grid.html" target="_self" rel="noreferrer">
+            <div class="position" id="p-fixed">
+                <img src="./public/assets/Whatsapp-icon.png" alt="Whatsapp-icon" width="30px">
+            </div>
+        </a>
+        <!-- <div class="position" id="p-absolute">Position absolute</div> -->
+        <hr>
+        <div class="d-inline">Display inline 1</div>
+        <div class="d-inline">Display inline 2</div>
+        <a class="d-block" href="">Anchor 1</a>
+        <a class="d-block" href="">Anchor 2</a>
+        <a class="d-block" href="">Anchor 3</a>
+        <div class="d-inblock">Inblock 1</div>
+        <div class="d-inblock">Inblock 2</div>
+        <div class="d-none">Div que desaparece (display none)</div>
+    </aside>
+    
+    <!-- Footer -->
+    <footer>
+        <div id="footer--sections">
+            <section class="f--section">Sobre nosotros
+                <a href="" target="_blank">Historia</a>
+                <a href="" target="_blank">Misión</a>
+                <a href="" target="_blank">Visión</a>
+            </section>
+            <section class="f--section">Menú
+                <a href="" target="_blank">Nasa</a>
+                <a href="" target="_blank">Astros</a>
+                <a href="" target="_blank">ISS</a>
+            </section>
+            <section class="f--section">Legales
+                <a href="" target="_blank">Aviso de privacidad</a>
+                <a href="" target="_blank">T&C</a>
+                <a href="" target="_blank">Cookies</a>
+            </section>
+        </div>
+        <div id="copyright">
+            <p>&copy; Derechos reservados. 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
