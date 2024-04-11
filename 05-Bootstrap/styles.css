@@ -1,0 +1,21 @@
+#NavbarPrincipal {
+    background-color:hotpink;
+}
+
+nav.nav.link,
+nav .navbar-brand,
+nav .nav-link {
+    color: burlywood;
+}
+
+#ClaseContenedor, #ClaseRow, #ClaseCol {
+    color:grey;
+    background-color: blueviolet;
+    border: 5px slateblue;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding-top: 5px;
+}
+
+
+
