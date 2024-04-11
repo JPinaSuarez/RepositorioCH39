@@ -72,3 +72,82 @@ for (let nombre of nombres) {
 for (let nombre in nombres){
     console.log(nombre);
 }
+
+//--- Ciclo while. Recorre un bloque de código mientras una condición específica sea verdadera. while (condition) { bloque de código}
+//Cuenta del 1 al 5
+let i = 0;
+
+while (i < 5) {
+    i++;
+    console.log(i);
+}
+
+//Imprimir los elementos de un array
+const frutas = ["fresa", "sandia", "naranja", "manzana", "zapote", "pera", "mandarina", "toronja", "guayaba"];
+
+let fruta = 0;
+while (fruta < frutas.length) {
+    console.log(frutas[fruta]);
+    fruta++;
+}
+
+//Imprimir una secuencia creciente de asteriscos, 1 a 5
+let limite = 5;
+let iteracion = 0;
+let asterisco = "";
+
+while (iteracion < limite) {
+    //asterisco = asterisco + "*";
+    asterisco += "*"; //refactorizando
+    console.log(asterisco);
+    iteracion++;
+}
+
+//--- Ciclo do-while. Recorre un bloque de código mientras una condición específica sea verdadera, pero se ejecuta una vez sin importar la condición, y después evalúa.
+let j = 0;
+
+while (j > 1){ //false
+    console.log(j);
+    j++;
+}
+
+//Contrastando con el ciclo while, en donde si se imprime el 0 porque la sentencia se ejecuta al menos una vez y después pasa a while para evaluar
+do {
+    console.log(j);
+    j++;
+} while (j > 1);
+
+//--- Control de ciclos. Podemos recurrir a dos sentencias: break y continue. Break detiene un ciclo, en cambio continue permite que el ciclo continúe y muestra un valor distinto 
+j = 0; //Reasigno el valor 0 a la variable
+
+while (j < 100 ){
+    j++;
+    console.log(j);
+    //Sentencia break
+    if(j === 22) {
+        break;
+    }
+}
+
+for (let j = 1; j <= 10; j++){
+    if(j === 7) {
+        console.log("Cliente ganador " + j);
+        continue;
+    }
+    console.log(`Cliente número ${j}`);
+}
+
+//break and continue
+let k;
+cuenta = 0;
+
+for (k = 0; k <= 20; k++) {
+    if(k === 13) {
+        break;
+    }
+    if(k % 2 === 0) {
+        continue;
+    }
+    cuenta++;
+}
+console.log(`Hay ${cuenta} números impares`);
