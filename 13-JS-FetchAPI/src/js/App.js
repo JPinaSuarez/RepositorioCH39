@@ -43,7 +43,7 @@ fetch(url)
     })
     .catch(error => console.error("¡No funcionó mi chavo", error)); //Si se rechaza me muestra este mensaje de error
 
-//---- Manipulación del DOM para mostrar en el navegador
+//---- Manipulación del DOM para mostrar en el navegador (GET)
 // 1. Guardar los elementos en constantes
 const botonInfo = document.querySelector("#button--info");
 const contenedorInfo = document.querySelector("#div--info");
@@ -72,7 +72,7 @@ const mostrarDatos = (post) => {
     contenedorInfo.appendChild(phone);
 };
 
-// 4. Consumir API con fetch y evento
+// 4. Consumir API con fetch (método GET) y evento
 botonInfo.addEventListener("click", () => {
     fetch("https://jsonplaceholder.typicode.com/users/8")
         .then(resp => resp.json())
@@ -83,3 +83,45 @@ botonInfo.addEventListener("click", () => {
         })
         .catch()
 });
+
+//--- Método POST con fetch API
+const urlPost = "https://jsonplaceholder.typicode.com/posts";
+
+fetch(urlPost, {
+    //Indicamos que esta promesa es de tipo POST
+    method: "POST",
+    //Definir headers
+    headers: {'Content-Type': 'application/json; charset=UTF-8'},
+    //Definir el body que debe coincidir con mi API, para ello le paso un método stringify que me permite transformar el objeto en formato Json
+    body: JSON.stringify({
+        userId: 1986,
+        id: 25365, //Es autoincrementable, entonces no se visualiza
+        title: "un nuevo elemento en la API",
+        body: "Estoy enviando un nuevo objeto de tipo JSON a la API de jsonplaceholder utilizando el método POST"
+    })
+})
+    .then(res => res.json())
+    .then(res => {
+        console.log(res);
+    })
+    .catch(err => console.error(err))
+
+//--- Programación asíncrona
+// En asynch tenemos funciones de tipo async-await
+const getUser = async () => {
+    try {
+        /* Para agregar un delay en mi promesa
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        */
+    
+        //Promesa
+        const response = await fetch("https://jsonplaceholder.typicode.com/users/8");
+        const data = await response.json();
+        console.log(data);
+    }
+    catch(error) {
+        console.error("Error en la petición", error);
+    }
+};
+
+getUser();
