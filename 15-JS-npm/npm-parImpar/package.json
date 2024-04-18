@@ -1,0 +1,16 @@
+{
+  "name": "danieldlcm86--parimpar",
+  "version": "1.0.1",
+  "description": "Permite determinar si un número es par o es impar",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "generation",
+    "ch39"
+  ],
+  "author": "danieldlcm86",
+  "license": "ISC"
+}
