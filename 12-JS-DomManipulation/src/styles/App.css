@@ -1,0 +1,21 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+button {
+    padding: 6px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#btn--reset {
+    background-color: brown;
+}
