@@ -74,23 +74,39 @@ class participante extends ch39 {
         super(nombre, apellido, email, telefono);
         this.age = edad;
     }
-    canvas(){
+    canvas() {
         alert("Terminaste e ejercicio");
     }
 }
 
 
 
+class instruccion extends ch39 {
+    constructor(nombre, apellido, email, telefono, licenciatura) {
+        super(nombre, apellido, email, telefono);
+        this.degree = licenciatura;
+    }
+    darSesiones(){
+        console.log("Tienes sesion hoy");
+    }
+}
+
+class mentoria extends ch39 {
+    constructor(nombre, apellido, email, telefono, grupo) {
+        super(nombre, apellido,email, telefono);
+        this.team = grupo;
+    }
+    
+}
 
 
-
-    const int1 = new ch39("Gabriela", "Cortes", "gaby@mail.com", 5512639852);
-    const int2 = new ch39("Daniel", "Maldnado", "dani@gmail.com", 5578451265);
-    const int3 = new ch39("Maara", "Lomeli", "maara@gmail.com", 5512874565);
-    const int4 = new ch39("Fernanda", "Ramos", "fer@gmail.com", 5541213256);
-    const int5 = new ch39("Andy", "Garibaldi", "andy@gmail.com", 5578451267, 24);
-    const int6 = new participante("Javier", "Cadena", "javi@gmail.com", 5512874575, 25);
-    const int7 = new ch39("Lizbeth", "Lopez", "liz@gmail.com", 5541213756, 23);
+const int1 = new ch39("Gabriela", "Cortes", "gaby@mail.com", 5512639852);
+const int2 = new instruccion("Daniel", "Maldnado", "dani@gmail.com", 5578451265);
+const int3 = new ch39("Maara", "Lomeli", "maara@gmail.com", 5512874565);
+const int4 = new ch39("Fernanda", "Ramos", "fer@gmail.com", 5541213256);
+const int5 = new ch39("Andy", "Garibaldi", "andy@gmail.com", 5578451267, 24);
+const int6 = new participante("Javier", "Cadena", "javi@gmail.com", 5512874575, 25);
+const int7 = new ch39("Lizbeth", "Lopez", "liz@gmail.com", 5541213756, 23);
 
 int6.canvas();
 int2.infoIntegrantes();
