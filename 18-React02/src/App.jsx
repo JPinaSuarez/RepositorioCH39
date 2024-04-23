@@ -4,6 +4,7 @@ import Footer from './components/footer/Footer'
 import Button from './components/button/Button'
 import Products from './components/products/Products'
 import Astros from './components/Astros/Astros'
+import Landing from './components/landing/Landing'
 
   // Estilos como constante que contiene un objeto
   const pStyle = {
@@ -57,7 +58,10 @@ function App() {
 
       <hr />
       <Astros />
+      <hr />
 
+      <h2 style={{ color: "#fff176" }}>Material UI Component</h2>
+      <Landing />
       < Footer />
     </>
   )
