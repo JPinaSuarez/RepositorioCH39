@@ -3,6 +3,7 @@ import './App.css'
 import Footer from './components/footer/Footer'
 import Button from './components/button/Button'
 import Products from './components/products/Products'
+import Astros from './components/Astros/Astros'
 
   // Estilos como constante que contiene un objeto
   const pStyle = {
@@ -53,6 +54,9 @@ function App() {
         description="Tenis color camello (beige)"
         price="$ 21,565.00"
       />
+
+      <hr />
+      <Astros />
 
       < Footer />
     </>
