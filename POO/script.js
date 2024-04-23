@@ -7,7 +7,15 @@ Atributo : Es una caracteristica o propiedad asociado a un objeto
 Abstraccion : Se basa en reducir al objeto, es decir que sea lo menos complejo posible 
 Herencia : Se refiere a que cuando creamos una clase, va a tomar todo lo que tiene esa clase y se lo va a "heredar" (pasar) a la siguiente clase (subclase)
 Polimorfismo : Tener instancias de clases diferentes, pero responden al mismo metodo pero de forma diferente. Como un objeto se comporta de forma distinta ante el mismo metodo
- */
+Metodos estaticos : Es un metodo que no necesita que el objeto este definido para poder ser creado
+Metodo setter : nos ayuda a hacer modificaciones dentro de mis parametros 
+Metodo getter : Nos ayuda a obtener un valor  
+Principios solid: 
+1.- SRP Single Responsability Principle (Principio de responsabiliad unica) : Establece que una clase debe tener una unica responsabilidad 
+2.- OCP Open/Close principle (principio de abierto y cerrado) Las clases deben estar abiertas para la extension
+3.- LSP Liskov Subtitutio Principle (Principio de sustitucion de liskov) Establece que los objetos deuna clase hija pueden ser sutituidos por objetos de una clase padre sin afectar a mi programa
+4.- ISP Interface Segregation Principle (Principio de segregacion de interfaces) Establece que mi usuarix no vera inetrfaces que no utilice
+5.- DIP Dependency Inversion Principle (Principio de inversion de dependencias) Los modulos de alto nivel no deben depender de modulos de bajo nivel. */
 
 
 
@@ -49,7 +57,7 @@ class ch39 {
 
     }
     infoIntegrantes() {
-        console.log(this.info);
+        // console.log(this.info);
     }
 
     organizadores() {
@@ -67,6 +75,7 @@ class ch39 {
         }
 
     }
+
 }
 
 class participante extends ch39 {
@@ -74,8 +83,8 @@ class participante extends ch39 {
         super(nombre, apellido, email, telefono);
         this.age = edad;
     }
-    canvas() {
-        alert("Terminaste e ejercicio");
+    static canvas() {
+        alert("Terminaste el ejercicio");
     }
 }
 
@@ -84,30 +93,52 @@ class participante extends ch39 {
 class instruccion extends ch39 {
     constructor(nombre, apellido, email, telefono, licenciatura) {
         super(nombre, apellido, email, telefono);
-        this.degree = licenciatura;
+        this.degree = null;
     }
-    darSesiones(){
+    darSesiones() {
         console.log("Tienes sesion hoy");
     }
+    set setDegree(newDegree) {
+        this.degree = newDegree;
+    }
+
+    get getDegree() {
+        return this.degree;
+    }
+
+
 }
 
 class mentoria extends ch39 {
     constructor(nombre, apellido, email, telefono, grupo) {
-        super(nombre, apellido,email, telefono);
+        super(nombre, apellido, email, telefono);
         this.team = grupo;
     }
-    
+    mentorias() {
+        console.log("Agendaste mentoria");
+    }
 }
 
 
-const int1 = new ch39("Gabriela", "Cortes", "gaby@mail.com", 5512639852);
-const int2 = new instruccion("Daniel", "Maldnado", "dani@gmail.com", 5578451265);
+const int1 = new mentoria("Gabriela", "Cortes", "gaby@mail.com", 5512639852);
+const int2 = new instruccion("Daniel", "Maldnado", "dani@gmail.com", 5578451265, "maestria");
 const int3 = new ch39("Maara", "Lomeli", "maara@gmail.com", 5512874565);
-const int4 = new ch39("Fernanda", "Ramos", "fer@gmail.com", 5541213256);
+const int4 = new instruccion("Fernanda", "Ramos", "fer@gmail.com", 5541213256);
 const int5 = new ch39("Andy", "Garibaldi", "andy@gmail.com", 5578451267, 24);
-const int6 = new participante("Javier", "Cadena", "javi@gmail.com", 5512874575, 25);
-const int7 = new ch39("Lizbeth", "Lopez", "liz@gmail.com", 5541213756, 23);
+//const int6 = new participante("Javier", "Cadena", "javi@gmail.com", 5512874575, 25);
+//const int7 = new participante("Lizbeth", "Lopez", "liz@gmail.com", 5541213756, 23);
 
-int6.canvas();
+
+
+participante.canvas();
+//int6.canvas();
 int2.infoIntegrantes();
-int7.canvas();
+//int7.canvas();
+int1.mentorias();
+int4.darSesiones();
+
+
+int2.setDegree = "Doctorado";
+
+document.write(int2.getDegree);
+

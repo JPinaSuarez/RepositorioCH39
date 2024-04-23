@@ -1,0 +1,42 @@
+[
+    {
+        "nombre": "Eduardo",
+        "apellido": "Sosa",
+        "hobbies": [
+            "yoga",
+            "juegos de mesa",
+            "ver pelis"
+        ]
+    "edad": 25
+    },
+    {
+        "nombre": "Andrea",
+        "apellido": "Garibaldi",
+        "hobbies": [
+            "",
+            "juegos de mesa",
+            "ver pelis"
+        ]
+    "edad": 25
+    },
+    {
+        "nombre": "Mario",
+        "apellido": "Sandoval",
+        "hobbies": [
+            "yoga",
+            "juegos de mesa",
+            "ver pelis"
+        ]
+    "edad": 25
+    },
+    {
+        "nombre": "Valeria",
+        "apellido": "Gonzalez",
+        "hobbies": [
+            "yoga",
+            "juegos de mesa",
+            "ver pelis"
+        ]
+    "edad": 25
+    }
+]
