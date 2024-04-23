@@ -11,6 +11,10 @@ import Products from './components/products/Products'
     fontFamily: "cursive",
   }
 
+  const urlTenisMorados = "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/82/6142201/1.jpg?2933"
+  const urlTenisDark = "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/01/241417/1.jpg?6747"
+  const urlTenisCamel = "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/06/4410121/1.jpg?4437"
+
 function App() {
 
   return (
@@ -29,7 +33,27 @@ function App() {
         <Button label='Último botón' />
       </div>
 
-      <Products />
+      <Products 
+        img={ urlTenisMorados }
+        name="Tenis morados"
+        description="Tenis morados hechos en México"
+        price="$ 2,599.00"
+      />
+
+      <Products 
+        img={ urlTenisDark }
+        name="Tenis negros"
+        description="Tenis negros fabricados en Vietnam"
+        price="$ 999.00"
+      />
+
+      <Products 
+        img={ urlTenisCamel }
+        name="Tenis camello"
+        description="Tenis color camello (beige)"
+        price="$ 21,565.00"
+      />
+
       < Footer />
     </>
   )
