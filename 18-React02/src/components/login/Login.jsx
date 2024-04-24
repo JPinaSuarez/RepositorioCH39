@@ -1,17 +1,16 @@
-import './Astros.css'
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 
-function Astros () {
+const Login = () => {
     return (
         <>
             < Navbar />
 
-            <h1>Astros API</h1>
-            
+            <h1>Login</h1>
+
             < Footer />
         </>
     )
 }
 
-export default Astros
+export default Login
