@@ -4,8 +4,7 @@ import Footer from './components/footer/Footer'
 import Button from './components/button/Button'
 import Products from './components/products/Products'
 import Landing from './components/landing/Landing'
-import { Route, Routes } from 'react-router-dom'
-import Astros from './components/Astros/Astros'
+import { Link } from 'react-router-dom'
 
   // Estilos como constante que contiene un objeto
   const pStyle = {
@@ -31,8 +30,12 @@ function App() {
       <p style={ pStyle } >Bienvenidos</p>*/}
 
       <div className='button--container'>
-        <Button label='Astros' />
-        <Button label='Login' />
+        <Link to="/astros">
+          <Button label='Astros' />
+        </Link>
+        <Link to="/login">
+          <Button label='Login' />
+        </Link>
       </div>
       <hr />
 
@@ -63,15 +66,6 @@ function App() {
       <Landing />
 
       < Footer />
-
-      {/* Aquí irán mis Routes definidas de manera individual, definiendo rutas mediante el path asignado y el elemento 
-      * path, hace referencia a la ruta que se escribirá en el buscador del navegador ../path
-      */}
-      <Routes>
-        {/* <Route path="/" element={ <App /> }/> */}
-        <Route path="astros" element={ <Astros /> } />
-        <Route path="login" />
-      </Routes>
 
     </>
   )

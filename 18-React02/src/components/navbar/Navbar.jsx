@@ -1,6 +1,7 @@
 import './Navbar.css'
 import logoNasa from '../../assets/NASA_logo.png'
 import Button from '../button/Button';
+import { Link } from 'react-router-dom';
 
 const urlAstros = 'http://api.open-notify.org/astros.json';
 const urlNasa = 'https://www.nasa.gov/';
@@ -11,7 +12,9 @@ const Navbar = () => {
         <>
             <nav className="navbar--container">
                 <div className="navbar--logo">
-                    <img src={ logoNasa } alt="logo-nasa" className="navbar--logo" id="logo-nasa" />
+                    <Link to="/">
+                        <img src={ logoNasa } alt="logo-nasa" className="navbar--logo" id="logo-nasa" />
+                    </Link>
                 </div>
                 <div className="navbar--menu">
                     <a href={ urlAstros } target="_blank">Astros</a>
